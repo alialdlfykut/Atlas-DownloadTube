@@ -1,0 +1,315 @@
+/* Atlas DownloadTube - Content Styles (V6.5 Red Edition) */
+
+/* زر Atlas DownloadTube العائم القابل للتحريك في كامل الصفحة */
+.atlas-video-btn, .idm-video-btn {
+  position: fixed !important;
+  top: 14px;
+  left: 14px;
+  z-index: 2147483647 !important;
+  background: linear-gradient(135deg, #e24c41, #c62828) !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  padding: 7px 14px !important;
+  border-radius: 22px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 18px rgba(226, 76, 65, 0.45) !important;
+  cursor: grab !important;
+  display: flex;
+  align-items: center !important;
+  gap: 10px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+  user-select: none !important;
+  text-decoration: none !important;
+  direction: rtl !important;
+}
+
+.atlas-video-btn:hover, .idm-video-btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 22px rgba(226, 76, 65, 0.7) !important;
+  background: linear-gradient(135deg, #ef5350, #d32f2f) !important;
+}
+
+.atlas-video-btn:active, .idm-video-btn:active {
+  cursor: grabbing !important;
+}
+
+/* إخفاء الزر عند النقر على علامة [x] */
+.atlas-video-btn.atlas-hidden, .idm-video-btn.atlas-hidden {
+  display: none !important;
+}
+
+/* نص الزر بلون أبيض ناصع وحجم مكبّر ومناسب للزر */
+.atlas-btn-text {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.3px;
+  line-height: 1 !important;
+}
+
+/* زر إغلاق وحذف الزر من الفيديو الحالي [×] */
+.atlas-btn-close {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  margin-right: 2px !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.2s ease !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.atlas-btn-close:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  transform: scale(1.18) !important;
+  border-color: #ffffff !important;
+}
+
+/* قائمة اختيار الجودات المنبثقة */
+.atlas-quality-dropdown, .idm-quality-dropdown {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  width: 340px !important;
+  max-height: 480px !important;
+  background: #181c24 !important;
+  border: 1px solid #333e50 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.75) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  color: #f8f9fa !important;
+  direction: rtl !important;
+  overflow-y: auto !important;
+  padding: 14px !important;
+  animation: atlasFadeIn 0.2s ease-out !important;
+}
+
+@keyframes atlasFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.atlas-dropdown-header, .idm-dropdown-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid #2a313d !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.atlas-dropdown-title, .idm-dropdown-title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #e24c41 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 270px !important;
+}
+
+.atlas-close-btn, .idm-close-btn {
+  background: none !important;
+  border: none !important;
+  color: #a0aec0 !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  padding: 2px 6px !important;
+  line-height: 1 !important;
+  border-radius: 4px !important;
+  transition: all 0.2s !important;
+}
+
+.atlas-close-btn:hover, .idm-close-btn:hover {
+  color: #ff4757 !important;
+  background: rgba(255, 71, 87, 0.2) !important;
+}
+
+.atlas-section-label, .idm-section-label {
+  font-size: 11px !important;
+  font-weight: bold !important;
+  color: #a0aec0 !important;
+  text-transform: uppercase !important;
+  margin: 10px 0 6px 0 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.atlas-opt-item, .idm-opt-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: #232936 !important;
+  border: 1px solid #323b4c !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  margin-bottom: 6px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.atlas-opt-item:hover, .idm-opt-item:hover {
+  background: #e24c41 !important;
+  border-color: #ef5350 !important;
+  color: #ffffff !important;
+  transform: translateX(-3px) !important;
+}
+
+.atlas-opt-badge, .idm-opt-badge {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  padding: 2px 7px !important;
+  border-radius: 10px !important;
+}
+
+.atlas-loading-spinner, .idm-loading-spinner {
+  text-align: center !important;
+  padding: 20px 0 !important;
+  color: #a0aec0 !important;
+  font-size: 13px !important;
+}
+
+/* بطاقة التحميل المباشر التفاعلية */
+.atlas-active-card, .idm-active-card {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  z-index: 2147483647 !important;
+  width: 330px !important;
+  background: #12161f !important;
+  border: 1px solid #2b3548 !important;
+  border-right: 4px solid #e24c41 !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: #ffffff !important;
+  direction: rtl !important;
+  animation: atlasSlideIn 0.3s ease !important;
+}
+
+@keyframes atlasSlideIn {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.atlas-card-close, .idm-card-close {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  background: none !important;
+  border: none !important;
+  color: #a0aec0 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  transition: all 0.2s !important;
+  z-index: 10 !important;
+}
+
+.atlas-card-close:hover, .idm-card-close:hover {
+  color: #ff4757 !important;
+  background: rgba(255, 71, 87, 0.2) !important;
+}
+
+.atlas-card-title, .idm-card-title {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #e24c41 !important;
+  margin-bottom: 8px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  padding-left: 20px !important;
+}
+
+.atlas-progress-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 10px 0 !important;
+  direction: ltr !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.atlas-progress-container, .idm-progress-container {
+  flex: 1 1 auto !important;
+  height: 12px !important;
+  background: #1c2230 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  border: 1px solid #323b4c !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  box-sizing: border-box !important;
+}
+
+.atlas-progress-bar, .idm-progress-bar {
+  height: 100% !important;
+  display: block !important;
+  background: linear-gradient(90deg, #ff4757, #e24c41) !important;
+  border-radius: 6px !important;
+  transition: width 0.25s ease !important;
+  box-shadow: 0 0 10px rgba(226, 76, 65, 0.7) !important;
+}
+
+.atlas-progress-pct {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  background: #e24c41 !important;
+  padding: 2px 7px !important;
+  border-radius: 5px !important;
+  min-width: 42px !important;
+  text-align: center !important;
+  font-family: Consolas, monospace, sans-serif !important;
+  line-height: 1.2 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+  flex-shrink: 0 !important;
+}
+
+.atlas-card-stats, .idm-card-stats {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 11px !important;
+  color: #a0aec0 !important;
+  margin-bottom: 6px !important;
+}
+
+.atlas-open-folder-btn, .idm-open-folder-btn {
+  width: 100% !important;
+  background: #e24c41 !important;
+  border: 1px solid #c62828 !important;
+  color: #ffffff !important;
+  padding: 8px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  margin-top: 6px !important;
+  transition: all 0.2s !important;
+  text-align: center !important;
+}
+
+.atlas-open-folder-btn:hover, .idm-open-folder-btn:hover {
+  background: #c62828 !important;
+  border-color: #b71c1c !important;
+}

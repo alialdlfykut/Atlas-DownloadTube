@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+service_err.log
+err.log
+out.log
+
+# Test / video artifacts
+*.mp4
+*.avi
+*.gif
+scratch/
